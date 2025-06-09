@@ -1,0 +1,7 @@
+{
+    "openAI": {
+        "mini": "gpt-4o-mini",
+        "provider": "openai"
+    }
+
+}
