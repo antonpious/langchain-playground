@@ -1,18 +1,18 @@
-import os
-from dotenv import load_dotenv 
+from settings import Settings
 from langchain.chat_models import init_chat_model
 
-# loading variables from .env file
-load_dotenv() 
-
-# there is no need to get the key
-# the key is expected to be in the environmental variables
-# os.getenv("OPENAI_API_KEY")
-
-from langchain.chat_models import init_chat_model
-
-model = init_chat_model("gpt-4o-mini", model_provider="openai")
+# command + / for uncommenting this block
+# import os
+# #the openAI API key is expected to be in the environmental variables
+# print(os.getenv("OPENAI_API_KEY"))
 
 
+# initialize the model
+modelClient = init_chat_model(Settings.openAI.mini, 
+                              model_provider=Settings.openAI.provider)
 
-openaiClient = openai
+
+
+
+
+

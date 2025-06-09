@@ -1,5 +1,11 @@
+from dotenv import load_dotenv 
 import json
 from box import Box
+
+
+# This file is to be loaded for all modules
+# loading the environmental variables from .env file
+load_dotenv() 
 
 # Box provides a clean dot syntax available to other languages
 # Currently this is not available during typing
