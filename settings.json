@@ -1,7 +1,13 @@
 {
     "openAI": {
         "mini": "gpt-4o-mini",
-        "provider": "openai"
+        "provider": "openai",
+        "embeddingSmall": "text-embedding-3-small"
+    },
+    "pineCone":{
+        "reviewNamespace": "tenant2",
+        "ragNamespace": "tenant3",
+        "indexName": "companies"
     }
 
 }

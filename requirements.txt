@@ -1,4 +1,5 @@
 python-dotenv
-openai
-langchain[openai]
+langchain
+langchain-pinecone
+langchain-openai
 python-box[all]
