@@ -28,6 +28,10 @@ After completing these steps, you’ll be ready to move on to configuration and 
 
 
 # Create the chain for retrieval
+# look at all templates
+# https://smith.langchain.com/hub/langchain-ai?organizationId=d9ea56f8-ed98-5632-b376-dff134eb0275
+# this template
+# https://smith.langchain.com/hub/langchain-ai/retrieval-qa-chat?organizationId=d9ea56f8-ed98-5632-b376-dff134eb0275
 retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
 retriever = ragVectorStore.as_retriever()
 
