@@ -25,3 +25,8 @@ There is a projects listing
 Then within each project there are each run listing the details
 
 
+LangChain Chains and Retrievers  
+https://esseai.github.io/langchain_project_handbook/fundamentals/chains_n_retriever/index.html
+
+
+
