@@ -1,6 +1,10 @@
 # local imports
 from reviewvectorstore import reviewVectorStore
 
+
+# These are examples of semantic search with the embedding of an LLM
+# The queries are matched against the actual text
+
 # similarity search
 results = reviewVectorStore.similarity_search(
     "LangChain provides abstractions to make working with LLMs easy",
