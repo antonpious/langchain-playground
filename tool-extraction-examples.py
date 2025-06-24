@@ -69,6 +69,76 @@ for txt, tool_call in examples:
     
     messages.extend(tool_example_to_messages(txt, [tool_call], ai_response=ai_response))
 
+print("Message Structure")
+print(messages)
+'''
+[
+    HumanMessage(
+        content="The ocean is vast and blue. It's more than 20,000 feet deep.", 
+        additional_kwargs={}, 
+        response_metadata={}), 
+    AIMessage(
+        content='', 
+        additional_kwargs={
+            'tool_calls': 
+                [
+                    {
+                        'id': '2de81d16-aa0a-42ed-adc3-d0c077e77e87', 
+                        'type': 'function', 
+                        'function': 
+                            {
+                                'name': 'Data', 
+                                'arguments': '{"people":[]}'}}]}, response_metadata={}, 
+                                tool_calls=
+                                    [{'name': 'Data', 'args': {'people': []}, 'id': '2de81d16-aa0a-42ed-adc3-d0c077e77e87', 'type': 'tool_call'}]), ToolMessage(content='You have correctly called this tool.', tool_call_id='2de81d16-aa0a-42ed-adc3-d0c077e77e87'), 
+    AIMessage(
+        content='Detected no people.', 
+        additional_kwargs={}, response_metadata={}
+        ), 
+    HumanMessage(
+        content='Fiona traveled far from France to Spain.', additional_kwargs={}, 
+        response_metadata={}), 
+    AIMessage(
+        content='', 
+        additional_kwargs=
+        {'tool_calls': 
+            [
+                {'id': '5574a34e-a41b-414d-9254-000d7f7e4e72', 
+                'type': 'function', 
+                'function': 
+                    {
+                        'name': 'Data', 
+                        'arguments': 
+                            '{
+                                "people":
+                                    [
+                                        {"name":"Fiona","hair_color":null,"height_in_meters":null}]}'}}
+                                    ]
+                            }, 
+                        response_metadata={}, 
+                        tool_calls=[
+                            {
+                                'name': 'Data', 
+                                'args': 
+                                {
+                                    'people': [
+                                        {'name': 'Fiona', 
+                                        'hair_color': None, 'height_in_meters': None}
+                                    ]
+                                }, 
+                                'id':'5574a34e-a41b-414d-9254-000d7f7e4e72', 'type': 'tool_call'}
+                            ]
+                    ), 
+    ToolMessage(
+        content='You have correctly called this tool.', tool_call_id='5574a34e-a41b-414d-9254-000d7f7e4e72'
+        ), 
+    AIMessage(
+        content='Detected people.', 
+        additional_kwargs={}, 
+        response_metadata={})]
+'''
+
+
 for message in messages:
     message.pretty_print()
 
